@@ -45,27 +45,30 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: "You must provide the location you're search for"
+      error: "You must provide the location you're searching for"
     });
   }
 
-  geocode(req.query.address, (error, { latitude, longitude, location }) => {
-    if (error) {
-      return res.send({ error: error });
-    }
-
-    forecast(latitude, longitude, (error, forecastData) => {
+  geocode(
+    req.query.address,
+    (error, { latitude, longitude, location } = {}) => {
       if (error) {
         return res.send({ error: error });
       }
 
-      res.send({
-        forecast: "It's " + forecastData,
-        location: location,
-        address: req.query.address
+      forecast(latitude, longitude, (error, forecastData) => {
+        if (error) {
+          return res.send({ error: error });
+        }
+
+        res.send({
+          forecast: "It's " + forecastData,
+          location: location,
+          address: req.query.address
+        });
       });
-    });
-  });
+    }
+  );
 });
 
 app.get("/help/*", (req, res) => {
