@@ -45,3 +45,21 @@ h1 {
 .portrait {
   width: 250px;
 }
+
+input {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  background: #888888;
+  border: 1px solid #888888;
+  color: #fff;
+  padding: 8px;
+  transition: 0.6s ease-in-out all;
+}
+
+button:hover {
+  background: #9a9a9a;
+}
