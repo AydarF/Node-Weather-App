@@ -39,7 +39,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     name: "Aydar Fayzullin",
-    message: "This this gonna be an awesome website"
+    message: "This is gonna be an awesome website!"
   });
 });
 
