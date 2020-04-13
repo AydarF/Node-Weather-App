@@ -25,14 +25,13 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        body.current.weather_descriptions +
-          ". It's currently " +
-          body.current.temperature +
-          "°C (" +
-          celsiusToFahrenheit(body.current.temperature) +
-          "°F) degrees. The chance of rain is " +
-          body.current.precip * 10 +
-          "%"
+        `${body.current.weather_descriptions}. 
+        It's currently ${body.current.temperature}°C (${celsiusToFahrenheit(
+          body.current.temperature
+        )}°F) degrees.
+         Feels like ${body.current.feelslike}°C (${celsiusToFahrenheit(
+          body.current.feelslike
+        )}°F). The chance of rain is ${body.current.humidity}%`
       );
     }
   });
