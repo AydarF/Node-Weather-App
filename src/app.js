@@ -21,6 +21,10 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
+function celsiusToFahrenheit(temp) {
+  return Math.round(+temp * 1.8 + 32);
+}
+
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
@@ -61,10 +65,22 @@ app.get("/weather", (req, res) => {
         if (error) {
           return res.send({ error: error });
         }
-
         res.send({
-          forecast: "Today: " + forecastData,
+          forecast: `Today: ${forecastData.current.weather_descriptions}. 
+          It's currently ${
+            forecastData.current.temperature
+          }°C (${celsiusToFahrenheit(
+            forecastData.current.temperature
+          )}°F) degrees.
+           Feels like ${
+             forecastData.current.feelslike
+           }°C (${celsiusToFahrenheit(
+            forecastData.current.feelslike
+          )}°F). The chance of precipitation is ${
+            forecastData.current.humidity
+          }%`,
           location: location,
+          weather_icons: forecastData.current.weather_icons,
           address: req.query.address
         });
       });

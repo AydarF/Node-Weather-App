@@ -1,9 +1,5 @@
 const request = require("postman-request");
 
-function celsiusToFahrenheit(temp) {
-  return Math.round(+temp * 1.8 + 32);
-}
-
 const forecast = (latitude, longitude, callback) => {
   const url =
     "http://api.weatherstack.com/current?access_key=" +
@@ -23,16 +19,7 @@ const forecast = (latitude, longitude, callback) => {
         undefined
       );
     } else {
-      callback(
-        undefined,
-        `${body.current.weather_descriptions}. 
-        It's currently ${body.current.temperature}°C (${celsiusToFahrenheit(
-          body.current.temperature
-        )}°F) degrees.
-         Feels like ${body.current.feelslike}°C (${celsiusToFahrenheit(
-          body.current.feelslike
-        )}°F). The chance of rain is ${body.current.humidity}%`
-      );
+      callback(undefined, body);
     }
   });
 };

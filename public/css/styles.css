@@ -67,3 +67,7 @@ button {
 button:hover {
   background: #9a9a9a;
 }
+
+.weatherIcon {
+  display: none;
+}
