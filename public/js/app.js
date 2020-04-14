@@ -22,8 +22,8 @@ weatherForm.addEventListener("submit", e => {
       } else {
         messageOne.textContent = `${data.location}`;
         messageTwo.textContent = `${data.forecast}`;
-        weatherIcon.src = `${data.weather_icons}`;
         weatherIcon.style.display = "block";
+        weatherIcon.style.backgroundImage = `url(${data.weather_icons}), linear-gradient(hsl(26, 24%, 42%), hsl(26, 24%, 42%))`;
       }
     });
   });
