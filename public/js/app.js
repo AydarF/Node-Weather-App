@@ -11,6 +11,7 @@ weatherForm.addEventListener("submit", e => {
 
   messageOne.textContent = "";
   messageTwo.textContent = "Loading...";
+  weatherIcon.style.display = "none";
 
   fetch(`/weather?address=${location}`).then(response => {
     response.json().then(data => {
