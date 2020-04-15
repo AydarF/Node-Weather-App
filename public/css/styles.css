@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap");
+
 :root {
   --display: flex;
   --flex-direction: row;
@@ -18,7 +20,7 @@ body {
   background-color: #2d2d2d;
   /* color: #333333; */
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Slabo 13px", serif;
   max-width: 650px;
 }
 
@@ -59,6 +61,7 @@ input {
   padding: 8px;
   font-size: var(--font-size);
   border-radius: 0;
+  font-family: "Slabo 13px", serif;
 }
 
 button {
@@ -69,6 +72,7 @@ button {
   padding: 8px;
   transition: 0.6s ease-in-out all;
   font-size: var(--font-size);
+  font-family: "Slabo 13px", serif;
 }
 
 button:hover {
