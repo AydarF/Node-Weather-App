@@ -21,21 +21,33 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
+// Convert Celsius to Fahrenheit
 function celsiusToFahrenheit(temp) {
   return Math.round(+temp * 1.8 + 32);
+}
+
+//Convert pressure (inches of mercury (inHg) and millibars)
+function inchmercuryToMillibars(inHg) {
+  let result = Number.parseFloat(inHg) * 0.02953;
+  return result.toFixed(2);
+}
+
+//Chance of rain
+function chanceOfRain(perc) {
+  return Number(perc) * 10;
 }
 
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "Aydar Fayzullin"
+    name: "Aydar Fayzullin",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Me",
-    name: "Aydar Fayzullin"
+    name: "Aydar Fayzullin",
   });
 });
 
@@ -43,14 +55,14 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     name: "Aydar Fayzullin",
-    message: "This is gonna be an awesome website!"
+    message: "This is gonna be an awesome website!",
   });
 });
 
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: "You must provide the location you're searching for"
+      error: "You must provide the location you're searching for",
     });
   }
 
@@ -66,22 +78,23 @@ app.get("/weather", (req, res) => {
           return res.send({ error: error });
         }
         res.send({
-          forecast: `Today: ${forecastData.current.weather_descriptions}. 
-          It's currently ${
-            forecastData.current.temperature
-          }°C (${celsiusToFahrenheit(
-            forecastData.current.temperature
-          )}°F) degrees.
-           Feels like ${
-             forecastData.current.feelslike
-           }°C (${celsiusToFahrenheit(
-            forecastData.current.feelslike
-          )}°F). The chance of precipitation is ${
-            forecastData.current.humidity
-          }%`,
+          precipitation: `${chanceOfRain(forecastData.current.precip)}%`,
           location: location,
+          temperature: `${
+            forecastData.current.temperature
+          }°C (${celsiusToFahrenheit(forecastData.current.temperature)}°F)`,
+          weather_descriptions: forecastData.current.weather_descriptions,
           weather_icons: forecastData.current.weather_icons,
-          address: req.query.address
+          address: req.query.address,
+          feelslike: `Feels like ${
+            forecastData.current.feelslike
+          }°C (${celsiusToFahrenheit(forecastData.current.feelslike)}°F)`,
+          wind_speed: `${forecastData.current.wind_speed}mph`,
+          humidity: `${forecastData.current.humidity}%`,
+          pressure: `${inchmercuryToMillibars(
+            forecastData.current.pressure
+          )}in`,
+          uv_index: `${forecastData.current.uv_index}`,
         });
       });
     }
@@ -92,7 +105,7 @@ app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "404",
     name: "Aydar Fayzullin",
-    errorMessage: "Help article not found"
+    errorMessage: "Help article not found",
   });
 });
 
@@ -100,7 +113,7 @@ app.get("*", (req, res) => {
   res.render("404", {
     title: "404",
     name: "Aydar Fayzullin",
-    errorMessage: "Page not found"
+    errorMessage: "Page not found",
   });
 });
 

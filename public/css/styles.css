@@ -78,3 +78,65 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.iconAndTemp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.iconAndTemp span {
+  margin-left: 20px;
+}
+
+.iconAndTemp .temperature {
+  margin: 0;
+  font-size: 36px;
+}
+
+.iconAndTemp .weatherDescriptions {
+  margin: 0;
+  padding: 0 0 7px;
+  font-size: 24px;
+  text-align: right;
+}
+
+.iconAndTemp .feelsLike {
+  margin: 0;
+  font-size: 16px;
+  text-align: right;
+}
+
+.details {
+  display: none;
+}
+
+.details .precipitation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details .wind {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details .humidity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details .pressure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details .uvIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
