@@ -103,6 +103,7 @@ button:hover {
 .iconAndTemp .temperature {
   margin: 0;
   font-size: 36px;
+  text-align: right;
 }
 
 .iconAndTemp .weatherDescriptions {
