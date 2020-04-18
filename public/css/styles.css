@@ -91,7 +91,7 @@ button:hover {
 }
 
 .iconAndTemp {
-  display: var(--display);
+  display: none;
   flex-direction: var(--flex-direction);
   justify-content: var(--justify-content);
 }

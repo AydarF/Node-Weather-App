@@ -3,6 +3,7 @@ const search = document.querySelector("input");
 const messageOne = document.querySelector(".messageOne");
 const precipitationData = document.querySelector(".precipitationData");
 const weatherIcon = document.querySelector(".weatherIcon");
+const iconAndTemp = document.querySelector(".iconAndTemp");
 const temperature = document.querySelector(".temperature");
 const weatherDescriptions = document.querySelector(".weatherDescriptions");
 const feelsLike = document.querySelector(".feelsLike");
@@ -19,6 +20,7 @@ weatherForm.addEventListener("submit", (e) => {
 
   messageOne.textContent = "Loading...";
   weatherIcon.style.display = "none";
+  iconAndTemp.style.display = "none";
   details.style.display = "none";
 
   fetch(`/weather?address=${location}`).then((response) => {
@@ -27,6 +29,7 @@ weatherForm.addEventListener("submit", (e) => {
         messageOne.textContent = data.error;
         console.log(data.error);
       } else {
+        iconAndTemp.style.display = "flex";
         weatherIcon.style.display = "block";
         details.style.display = "block";
         messageOne.textContent = `${data.location}`;
