@@ -90,10 +90,12 @@ app.get("/weather", (req, res) => {
             forecastData.current.feelslike
           }°C (${celsiusToFahrenheit(forecastData.current.feelslike)}°F)`,
           wind_speed: `${forecastData.current.wind_speed}mph`,
+          wind_direction: `${forecastData.current.wind_dir}`,
           humidity: `${forecastData.current.humidity}%`,
           pressure: `${inchmercuryToMillibars(
             forecastData.current.pressure
           )}in`,
+          visibility: `${forecastData.current.visibility}mi`,
           uv_index: `${forecastData.current.uv_index}`,
         });
       });

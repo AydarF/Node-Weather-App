@@ -8,9 +8,11 @@ const temperature = document.querySelector(".temperature");
 const weatherDescriptions = document.querySelector(".weatherDescriptions");
 const feelsLike = document.querySelector(".feelsLike");
 const windSpeed = document.querySelector(".windSpeed");
+const windDirectionData = document.querySelector(".windDirectionData");
 const details = document.querySelector(".details");
 const humidityData = document.querySelector(".humidityData");
 const pressureData = document.querySelector(".pressureData");
+const visibilityData = document.querySelector(".visibilityData");
 const uvIndexData = document.querySelector(".uvIndexData");
 
 weatherForm.addEventListener("submit", (e) => {
@@ -40,8 +42,10 @@ weatherForm.addEventListener("submit", (e) => {
         weatherDescriptions.textContent = `${data.weather_descriptions}`;
         feelsLike.textContent = `${data.feelslike}`;
         windSpeed.textContent = `${data.wind_speed}`;
+        windDirectionData.textContent = `${data.wind_direction}`;
         humidityData.textContent = `${data.humidity}`;
         pressureData.textContent = `${data.pressure}`;
+        visibilityData.textContent = `${data.visibility}`;
         uvIndexData.textContent = `${data.uv_index}`;
       }
     });

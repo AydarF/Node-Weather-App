@@ -167,6 +167,15 @@ h1 {
   border-bottom: var(--details-border-bottom);
 }
 
+.details .windDirection {
+  display: var(--display);
+  flex-direction: var(--flex-direction);
+  justify-content: var(--justify-content);
+  padding: var(--details-p-padding);
+  background-color: var(--background-color);
+  border-bottom: var(--details-border-bottom);
+}
+
 .details .humidity {
   display: var(--display);
   flex-direction: var(--flex-direction);
@@ -177,6 +186,15 @@ h1 {
 }
 
 .details .pressure {
+  display: var(--display);
+  flex-direction: var(--flex-direction);
+  justify-content: var(--justify-content);
+  padding: var(--details-p-padding);
+  background-color: var(--background-color);
+  border-bottom: var(--details-border-bottom);
+}
+
+.details .visibility {
   display: var(--display);
   flex-direction: var(--flex-direction);
   justify-content: var(--justify-content);
