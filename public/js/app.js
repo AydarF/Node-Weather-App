@@ -18,6 +18,7 @@ weatherForm.addEventListener("submit", (e) => {
 
   const location = search.value;
 
+  messageOne.style.display = "block";
   messageOne.textContent = "Loading...";
   weatherIcon.style.display = "none";
   iconAndTemp.style.display = "none";

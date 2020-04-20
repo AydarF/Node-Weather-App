@@ -7,17 +7,19 @@
     <title>Weather App</title>
     <link rel="icon" href="/img/weather-cloud.png">
     <link rel="stylesheet" href="/css/styles.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-        <p>Find out what's the weather like in any location in the world</p>
 
         <form>
-            <input type="text" placeholder="Location">
-            <button>Search</button>
-
+            <div class="searchArea">
+                <p>Find out what's the weather like in any location in the world</p>
+                <input type="text" placeholder="Location">
+                <button>Search</button>
+            </div>
             <p class="messageOne"></p>
 
             <div class="iconAndTemp">
