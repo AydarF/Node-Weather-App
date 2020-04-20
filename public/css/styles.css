@@ -147,7 +147,32 @@ h1 {
   display: none;
 }
 
+.details .precipitation,
+.details .wind,
+.details .windDirection,
+.details .humidity,
+.details .pressure,
+.details .visibility,
+.details .uvIndex {
+  display: var(--display);
+  flex-direction: var(--flex-direction);
+  justify-content: var(--justify-content);
+  padding: var(--details-p-padding);
+  background-color: var(--background-color);
+  border-bottom: var(--details-border-bottom);
+}
+
 .details .precipitation {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.details .uvIndex {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+/* .details .precipitation {
   display: var(--display);
   flex-direction: var(--flex-direction);
   justify-content: var(--justify-content);
@@ -212,4 +237,4 @@ h1 {
   border-bottom: var(--details-border-bottom);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-}
+} */
