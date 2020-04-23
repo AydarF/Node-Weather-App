@@ -61,6 +61,10 @@ header a:hover {
   border-color: salmon;
 }
 
+header a:active {
+  border-bottom: none;
+}
+
 h1 {
   font-size: 48px;
   margin-bottom: 16px;
