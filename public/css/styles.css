@@ -51,8 +51,14 @@ header {
 
 header a {
   color: #888888;
-  margin-right: 16px;
   text-decoration: none;
+  margin-right: 16px;
+  border-bottom: 1px solid transparent;
+}
+
+header a:hover {
+  transition: 0.45s ease-in-out;
+  border-color: salmon;
 }
 
 h1 {
