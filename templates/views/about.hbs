@@ -12,15 +12,31 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <img class="portrait" src="/img/puppy.jpg" alt="me">
-        <p>The stack used:</p>
-        <ul>
-            <li>HTML, CSS (duh, obviously)</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>Weatherstack API (weather data)</li>
-            <li>Mapbox API (location data)</li>
-        </ul>
+
+        <div class="goodBoiArea">
+            <p>If you're feeling sad about your weather, just look at this <a class="puppyLink"
+                    href="https://www.urbandictionary.com/define.php?term=Good%20boi" target="_blank"
+                    rel="noopener">good
+                    boi</a> :)</p>
+            <img class="portrait" src="/img/puppy.jpg" alt="puppy">
+        </div>
+
+        <div class="disclaimer">
+            <p>The weather data used on this website is fetched from <a href="https://weatherstack.com/" target="_blank"
+                    rel="noopener">Weathersatck</a>. The location data is provided by
+                <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox</a>.</p>
+        </div>
+
+        <div class="stackDetails">
+            <p>The stack used:</p>
+            <ul>
+                <li>HTML & CSS (duh, obviously)</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Weatherstack API (weather data)</li>
+                <li>Mapbox API (location data)</li>
+            </ul>
+        </div>
     </div>
 
     {{>footer}}

@@ -55,8 +55,7 @@ h1 {
 }
 
 .portrait {
-  width: 250px;
-  margin-bottom: 48px;
+  width: 100%;
 }
 
 .searchArea {
@@ -170,4 +169,65 @@ h1 {
 .details .uvIndex {
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+}
+
+/* Urban dictionary link on About page */
+.puppyLink {
+  text-decoration: none;
+  color: salmon;
+  border-bottom: 1px solid salmon;
+  transition: 0.35s all ease-in-out;
+}
+
+.puppyLink:hover {
+  border-color: transparent;
+}
+
+.goodBoiArea {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+}
+
+.goodBoiArea p {
+  margin: 0;
+  padding: 10px 0 20px 0;
+}
+
+.disclaimer {
+  margin-top: 10px;
+  padding: 20px 10px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.disclaimer p {
+  margin: 0;
+}
+
+.disclaimer a {
+  text-decoration: none;
+  color: salmon;
+  border-bottom: 1px solid salmon;
+  transition: 0.45s linear;
+}
+
+.disclaimer a:hover {
+  border-color: transparent;
+}
+
+.stackDetails {
+  margin-top: 10px;
+  padding: 20px 10px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.stackDetails p {
+  margin: 0;
+  padding: 0;
+}
+
+.stackDetails ul {
+  margin-bottom: 0;
 }
