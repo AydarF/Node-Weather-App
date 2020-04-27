@@ -247,3 +247,19 @@ h1 {
 .stackDetails ul {
   margin-bottom: 0;
 }
+
+.newsContainer {
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  overflow: auto;
+}
+
+.newsContainer h4 {
+  margin-top: 0;
+}
+
+.newsContainer p:last-of-type {
+  margin-bottom: 0;
+}
