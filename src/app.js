@@ -52,15 +52,15 @@ app.get("/about", (req, res) => {
   });
 });
 
-app.get("/help", (req, res) => {
-  res.render("help", {
-    title: "Help",
+app.get("/news", (req, res) => {
+  res.render("news", {
+    title: "News",
     name: "Aydar Fayzullin",
     message: "This is gonna be an awesome website!",
   });
 });
 
-app.get("/news", (req, res) => {
+app.get("/newsData", (req, res) => {
   news((error, newsData) => {
     if (error) {
       return res.send({ error: error });
@@ -113,11 +113,11 @@ app.get("/weather", (req, res) => {
   );
 });
 
-app.get("/help/*", (req, res) => {
+app.get("/news/*", (req, res) => {
   res.render("404", {
     title: "404",
     name: "Aydar Fayzullin",
-    errorMessage: "Help article not found",
+    errorMessage: "News article not found",
   });
 });
 

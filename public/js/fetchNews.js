@@ -1,6 +1,6 @@
 let newsFeed = document.querySelector(".newsFeed");
 
-fetch(`/news`).then((res) => {
+fetch(`/newsData`).then((res) => {
   res.json().then((data) => {
     if (data.error) {
       console.log(data.error);
