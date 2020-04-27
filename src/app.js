@@ -4,6 +4,7 @@ const hbs = require("hbs");
 
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
+const news = require("./utils/news");
 
 const app = express();
 const port = process.env.PORT;
@@ -56,6 +57,15 @@ app.get("/help", (req, res) => {
     title: "Help",
     name: "Aydar Fayzullin",
     message: "This is gonna be an awesome website!",
+  });
+});
+
+app.get("/news", (req, res) => {
+  news((error, newsData) => {
+    if (error) {
+      return res.send({ error: error });
+    }
+    res.send({ newsData });
   });
 });
 
