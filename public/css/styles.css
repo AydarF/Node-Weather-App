@@ -249,15 +249,27 @@ h1 {
 }
 
 .newsContainer {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
   overflow: auto;
 }
 
-.newsContainer h4 {
-  margin-top: 0;
+.newsContainer h3 {
+  margin: 0 0 20px 0;
+  line-height: 1.125;
+}
+
+.newsContainer p {
+  margin: 0;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.newsContainer .publishedAt {
+  font-size: 12px;
+  padding: 5px 0;
 }
 
 .newsContainer p:last-of-type {

@@ -10,7 +10,7 @@ fetch(`/newsData`).then((res) => {
           if (post.author === null) {
             post.author = "";
           }
-          return `${`<div class="newsContainer">`}<h4>${post.title}</h4><p>${post.author}</p><p>${post.publishedAt}</p><p>${post.description}</p>${`</div>`}`;
+          return `${`<div class="newsContainer">`}<h3>${post.title}</h3><p>${post.author}</p><p class="publishedAt">${post.publishedAt}</p><p>${post.description}</p>${`</div>`}`;
         })
         .join("");
     }
