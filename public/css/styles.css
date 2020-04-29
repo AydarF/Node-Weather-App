@@ -267,6 +267,15 @@ h1 {
   line-height: 1.25;
 }
 
+.newsContainer a {
+  color: salmon;
+  transition: opacity 0.35s linear;
+}
+
+.newsContainer a:hover {
+  opacity: 0.75;
+}
+
 .newsContainer .publishedAt {
   font-size: 12px;
   padding: 5px 0;
