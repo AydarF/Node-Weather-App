@@ -248,6 +248,19 @@ h1 {
   margin-bottom: 0;
 }
 
+/* The note about news being upated every 15 minutes */
+.newsNote {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+.newsNote p {
+  margin: 0;
+}
+
+/* Containers for each news article  */
 .newsContainer {
   margin-bottom: 20px;
   padding: 20px;
