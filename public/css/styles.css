@@ -88,14 +88,15 @@ h1 {
   border: 1px solid #cccccc;
   padding: 8px;
   font-size: var(--font-size);
-  border-radius: 0;
+  border-radius: 5px;
   font-family: "Slabo 13px", serif;
 }
 
 .searchArea button {
   cursor: pointer;
-  background: #888888;
-  border: 1px solid #888888;
+  background: salmon;
+  border: 1px solid salmon;
+  border-radius: var(--border-radius);
   color: #fff;
   padding: 8px;
   transition: 0.6s ease-in-out all;
@@ -104,7 +105,7 @@ h1 {
 }
 
 .searchArea button:hover {
-  background: #9a9a9a;
+  opacity: 0.75;
 }
 
 .messageOne {
