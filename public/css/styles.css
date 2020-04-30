@@ -78,6 +78,7 @@ h1 {
   padding: 20px 10px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
+  animation: fadeIn 1.5s;
 }
 
 .searchArea p {
@@ -113,6 +114,7 @@ h1 {
   padding: 10px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
+  animation: fadeIn 1.2s;
 }
 
 .weatherIcon {
@@ -124,6 +126,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: fadeIn 1.2s;
 }
 
 .iconAndTemp {
@@ -134,6 +137,7 @@ h1 {
   padding: 15px 10px;
   background-color: #2d2d2d;
   border-radius: 5px;
+  animation: fadeIn 1.2s;
 }
 
 .iconAndTemp span {
@@ -161,6 +165,7 @@ h1 {
 
 .details {
   display: none;
+  animation: fadeIn 1.2s;
 }
 
 .details .precipitation,
@@ -204,6 +209,7 @@ h1 {
   padding: 10px;
   border-radius: var(--border-radius);
   background-color: var(--background-color);
+  animation: fadeIn 1.5s;
 }
 
 .goodBoiArea p {
@@ -216,6 +222,7 @@ h1 {
   padding: 20px 10px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
+  animation: fadeIn 1.5s;
 }
 
 .disclaimer p {
@@ -238,6 +245,7 @@ h1 {
   padding: 20px 10px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
+  animation: 1.5s;
 }
 
 .stackDetails p {
@@ -255,6 +263,7 @@ h1 {
   border-radius: var(--border-radius);
   margin-bottom: 20px;
   padding: 10px 20px;
+  animation: fadeIn 1.5s;
 }
 
 .newsNote p {
@@ -268,6 +277,7 @@ h1 {
   background-color: var(--background-color);
   border-radius: var(--border-radius);
   overflow: auto;
+  animation: fadeIn 1.5s;
 }
 
 .newsContainer h3 {
@@ -279,6 +289,7 @@ h1 {
   margin: 0;
   margin-bottom: 6px;
   line-height: 1.25;
+  animation: fadeIn 1.7s;
 }
 
 .newsContainer a {
@@ -297,4 +308,13 @@ h1 {
 
 .newsContainer p:last-of-type {
   margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
