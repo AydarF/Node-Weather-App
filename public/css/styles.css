@@ -245,7 +245,7 @@ h1 {
   padding: 20px 10px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
-  animation: 1.5s;
+  animation: fadeIn 1.5s;
 }
 
 .stackDetails p {
@@ -261,7 +261,7 @@ h1 {
 .newsNote {
   background-color: var(--background-color);
   border-radius: var(--border-radius);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 10px 20px;
   animation: fadeIn 1.5s;
 }
@@ -272,12 +272,17 @@ h1 {
 
 /* Containers for each news article  */
 .newsContainer {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
   overflow: auto;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   animation: fadeIn 1.5s;
+}
+
+.newsContainer:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .newsContainer h3 {
