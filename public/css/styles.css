@@ -70,6 +70,11 @@ h1 {
   margin-bottom: 16px;
 }
 
+/* Page title on each page */
+.title {
+  animation: fadeIn 1.5s;
+}
+
 .portrait {
   width: 100%;
 }
