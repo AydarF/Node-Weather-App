@@ -1,4 +1,6 @@
-Task managing app. Built with Node.js, Express.js, MongoDB and Mongoose. 
+Weather and News app. Built with HTML, CSS, Handlebars, Node.js, Express.js, MongoDB, Mongoose, Weatherstack API, Mapbox API and News API.
+
+[Demo](https://yo-weather-and-news.herokuapp.com/)
 
 ## Available Scripts
 
