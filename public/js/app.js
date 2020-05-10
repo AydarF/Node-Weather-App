@@ -26,30 +26,36 @@ weatherForm.addEventListener("submit", (e) => {
   iconAndTemp.style.display = "none";
   details.style.display = "none";
 
-  fetch(`/weather?address=${location}`).then((response) => {
-    response.json().then((data) => {
-      if (data.error) {
-        messageOne.textContent = data.error;
-        console.log(data.error);
-      } else {
-        iconAndTemp.style.display = "flex";
-        weatherIcon.style.display = "block";
-        details.style.display = "block";
-        messageOne.textContent = `${data.location}`;
-        precipitationData.textContent = `${data.precipitation}`;
-        weatherIcon.style.backgroundImage = `url(${data.weather_icons}), linear-gradient(hsl(26, 24%, 42%), hsl(26, 24%, 42%))`;
-        temperature.textContent = `${data.temperature}`;
-        weatherDescriptions.textContent = `${data.weather_descriptions}`;
-        feelsLike.textContent = `${data.feelslike}`;
-        windSpeed.textContent = `${data.wind_speed}`;
-        windDirectionData.textContent = `${data.wind_direction}`;
-        humidityData.textContent = `${data.humidity}`;
-        pressureData.textContent = `${data.pressure}`;
-        visibilityData.textContent = `${data.visibility}`;
-        uvIndexData.textContent = `${data.uv_index}`;
-      }
+  fetch(`/weather?address=${location}`)
+    .then((response) => {
+      response.json().then((data) => {
+        if (data.error) {
+          messageOne.textContent = data.error;
+          console.log(data.error);
+        } else {
+          iconAndTemp.style.display = "flex";
+          weatherIcon.style.display = "block";
+          details.style.display = "block";
+          messageOne.textContent = `${data.location}`;
+          precipitationData.textContent = `${data.precipitation}`;
+          weatherIcon.style.backgroundImage = `url(${data.weather_icons}), linear-gradient(hsl(26, 24%, 42%), hsl(26, 24%, 42%))`;
+          temperature.textContent = `${data.temperature}`;
+          weatherDescriptions.textContent = `${data.weather_descriptions}`;
+          feelsLike.textContent = `${data.feelslike}`;
+          windSpeed.textContent = `${data.wind_speed}`;
+          windDirectionData.textContent = `${data.wind_direction}`;
+          humidityData.textContent = `${data.humidity}`;
+          pressureData.textContent = `${data.pressure}`;
+          visibilityData.textContent = `${data.visibility}`;
+          uvIndexData.textContent = `${data.uv_index}`;
+        }
+      });
+    })
+    .catch((error) => {
+      messageOne.textContent =
+        "This location doesn't seem to exist. Try to be more precise";
+      console.log(error.message);
     });
-  });
 
   search.value = "";
 });
