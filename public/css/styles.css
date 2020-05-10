@@ -332,3 +332,10 @@ h1 {
     opacity: 1;
   }
 }
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  animation: fadeIn 1.5s;
+}
