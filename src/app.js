@@ -107,6 +107,8 @@ app.get("/weather", (req, res) => {
           )}in`,
           visibility: `${forecastData.current.visibility}mi`,
           uv_index: `${forecastData.current.uv_index}`,
+          latitude: latitude,
+          longitude: longitude,
         });
       });
     }
