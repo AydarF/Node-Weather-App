@@ -15,15 +15,12 @@ const pressureData = document.querySelector(".pressureData");
 const visibilityData = document.querySelector(".visibilityData");
 const uvIndexData = document.querySelector(".uvIndexData");
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiYXlkYXJmIiwiYSI6ImNrYTBqeTdqcTFrN3UzZ21yYmV1cnlxemwifQ.keiVXWuzE5V8Glwmgs5CuA";
-
-var map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/mapbox/streets-v11",
-  center: [-74.5, 40],
-  zoom: 9,
-});
+// var map = new mapboxgl.Map({
+//   container: "map",
+//   style: "mapbox://styles/mapbox/streets-v11",
+//   center: [-74.5, 40],
+//   zoom: 9,
+// });
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -59,10 +56,10 @@ weatherForm.addEventListener("submit", (e) => {
           visibilityData.textContent = `${data.visibility}`;
           uvIndexData.textContent = `${data.uv_index}`;
 
-          map.flyTo({
-            center: [`${data.longitude}`, `${data.latitude}`],
-            essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-          });
+          // map.flyTo({
+          //   center: [`${data.longitude}`, `${data.latitude}`],
+          //   essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+          // });
         }
       });
     })
