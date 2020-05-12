@@ -17,7 +17,7 @@ const uvIndexData = document.querySelector(".uvIndexData");
 
 // This API is restricted, so good luck stealing it
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiYXlkYXJmIiwiYSI6ImNrYTF3a3FnYjA1c3kzZnF5cW51aGI2ZGUifQ.kM3l-MZ6M_dtYRltipWnGA";
+  "pk.eyJ1IjoiYXlkYXJmIiwiYSI6ImNrYTBqeTdqcTFrN3UzZ21yYmV1cnlxemwifQ.keiVXWuzE5V8Glwmgs5CuA";
 
 var map = new mapboxgl.Map({
   container: "map",
