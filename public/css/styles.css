@@ -160,14 +160,15 @@ h1 {
 
 .iconAndTemp .temperature {
   margin: 0;
-  font-size: 36px;
+  font-size: 30px;
   text-align: right;
+  font-weight: bold;
 }
 
 .iconAndTemp .weatherDescriptions {
   margin: 0;
   padding: 0 0 7px;
-  font-size: 24px;
+  font-size: 22px;
   text-align: right;
 }
 
