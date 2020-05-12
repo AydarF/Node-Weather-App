@@ -16,7 +16,8 @@ const visibilityData = document.querySelector(".visibilityData");
 const uvIndexData = document.querySelector(".uvIndexData");
 
 // This API is restricted, so good luck stealing it
-mapboxgl.accessToken = "";
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiYXlkYXJmIiwiYSI6ImNrYTF3a3FnYjA1c3kzZnF5cW51aGI2ZGUifQ.kM3l-MZ6M_dtYRltipWnGA";
 
 var map = new mapboxgl.Map({
   container: "map",
