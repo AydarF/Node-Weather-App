@@ -1,0 +1,31 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "App",
+  "display": "standalone",
+  "start_url": "/",
+  "short_name": "App",
+  "theme_color": "#2d2d2d",
+  "description": "An app",
+  "orientation": "portrait-primary",
+  "background_color": "#fff",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/img/weather-cloud.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/img/apple-touch.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/splash-screen.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
