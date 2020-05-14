@@ -13,7 +13,7 @@ fetch(`/newsData`).then((res) => {
           return `${`<div class="newsContainer">`}<h3>${post.title}</h3><p>${post.author}</p><p class="publishedAt">${post.publishedAt}</p><p>${post.description}</p>
          <p><a href=${
            post.url
-         } target="_blank">Read full article [external link]</a></p>${`</div>`}`;
+         } target="_blank" rel="noopener" rel="noreferrer">Read full article [external link]</a></p>${`</div>`}`;
         })
         .join("");
     }
