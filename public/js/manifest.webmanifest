@@ -1,14 +1,12 @@
 {
   "dir": "ltr",
   "lang": "en",
-  "name": "App",
+  "name": "Weather and News App",
   "display": "standalone",
   "start_url": "/",
-  "short_name": "App",
-  "theme_color": "#2d2d2d",
+  "short_name": "Weather and News App",
   "description": "An app",
   "orientation": "portrait-primary",
-  "background_color": "#fff",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [

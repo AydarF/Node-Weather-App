@@ -8,6 +8,7 @@ const toCache = [
   "img/splash-screen.png",
   "img/weather-cloud.png",
   "js/app.js",
+  "js/fetchNews.js",
   "js/manifest.webmanifest",
   "js/pwa.js",
   "js/status.js",
