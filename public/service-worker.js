@@ -1,6 +1,24 @@
 const CACHE_NAME = "sw-cache-example";
 
-const toCache = ["/", "/index.hbs"];
+const toCache = [
+  "/",
+  "css/styles.css",
+  "img/apple-touch.png",
+  "img/puppy.jpg",
+  "img/splash-screen.png",
+  "img/weather-cloud.png",
+  "js/app.js",
+  "js/manifest.webmanifest",
+  "js/pwa.js",
+  "js/status.js",
+  "../src/app.js",
+  "../templates/partials/header.hbs",
+  "../templates/partials/footer.hbs",
+  "../templates/views/index.hbs",
+  "../templates/views/about.hbs",
+  "../templates/views/404.hbs",
+  "../templates/views/news.hbs",
+];
 
 self.addEventListener("install", function(event) {
   event.waitUntil(
@@ -14,11 +32,29 @@ self.addEventListener("install", function(event) {
 });
 
 self.addEventListener("fetch", function(event) {
-  console.log(
-    "used to intercept requests so we can check for the file or data in the cache"
+  event.respondWith(
+    fetch(event.request).catch(() => {
+      return caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request);
+      });
+    })
   );
 });
 
 self.addEventListener("activate", function(event) {
-  console.log("this event triggers when the service worker activates");
+  event.waitUntil(
+    caches
+      .keys()
+      .then((keysList) => {
+        return Promise.all(
+          keysList.map((key) => {
+            if (key !== CACHE_NAME) {
+              console.log("[ServiceWorker] Removing old cache", key);
+              return caches.delete(key);
+            }
+          })
+        );
+      })
+      .then(() => self.clients.claim())
+  );
 });
