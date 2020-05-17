@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Define paths for Express config
-const publicDirectoryPath = path.join(__dirname, "../public/");
+const publicDirectoryPath = path.join(__dirname, "../");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
@@ -61,7 +61,7 @@ app.get("/news", (req, res) => {
 });
 
 app.get("/newsData", (req, res) => {
-  news((error, newsData) => {
+  news((error, newsData = {}) => {
     if (error) {
       return res.send({ error: error });
     }

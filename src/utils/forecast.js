@@ -10,9 +10,9 @@ const forecast = (latitude, longitude, callback) => {
     longitude +
     "&units=m";
 
-  request({ url, json: true }, (error, { body }) => {
+  request({ url, json: true }, (error, { body } = {}) => {
     if (error) {
-      console.log("Unable to connect to weather services. ", undefined);
+      console.log("Unable to connect to weather services ", undefined);
     } else if (body.error) {
       console.log(
         "Couldn't find the location. Try searching for something else... ",

@@ -19,7 +19,7 @@ const uvIndexData = document.querySelector(".uvIndexData");
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYXlkYXJmIiwiYSI6ImNrYTBqeTdqcTFrN3UzZ21yYmV1cnlxemwifQ.keiVXWuzE5V8Glwmgs5CuA";
 
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/dark-v10",
   center: [-71.057083, 42.361145],
@@ -68,8 +68,7 @@ weatherForm.addEventListener("submit", (e) => {
       });
     })
     .catch((error) => {
-      messageOne.textContent =
-        "This location doesn't seem to exist. Try to be more precise";
+      messageOne.textContent = error.message;
       console.log(error.message);
     });
 

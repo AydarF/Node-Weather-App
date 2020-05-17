@@ -7,11 +7,13 @@ const news = (callback) => {
     "apiKey=" +
     process.env.NEWS_API;
 
-  request({ url, json: true }, (error, { body }) => {
+  request({ url, json: true }, (error, { body } = {}) => {
     if (error) {
-      console.log("Unable to connect to news services", undefined);
+      callback("Unable to connect to news services ", undefined);
     } else if (body.error) {
-      console.log("Couldn't find any new in the given location", undefined);
+      callback("Couldn't find any news at this moment", undefined);
+    } else if (body === undefined || body === null) {
+      callback("Couldn't find any news at this moment", undefined);
     } else {
       callback(undefined, body);
     }
