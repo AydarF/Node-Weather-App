@@ -1,6 +1,7 @@
 const CACHE_NAME = "sw-cache-example";
 
 const toCache = [
+  "/newsdata",
   "/",
   "/css/styles.css",
   "/img/apple-touch.png",
@@ -8,7 +9,6 @@ const toCache = [
   "/img/splash-screen.png",
   "/img/weather-cloud.png",
   "/js/app.js",
-  "/js/fetchNews.js",
   "/js/pwa.js",
   "/src/utils/forecast.js",
   "/src/utils/geocode.js",
@@ -34,16 +34,6 @@ self.addEventListener("install", function(event) {
   );
 });
 
-self.addEventListener("fetch", function(event) {
-  event.respondWith(
-    fetch(event.request).catch(() => {
-      return caches.open(CACHE_NAME).then((cache) => {
-        return cache.match(event.request);
-      });
-    })
-  );
-});
-
 self.addEventListener("activate", function(event) {
   event.waitUntil(
     caches
@@ -59,5 +49,23 @@ self.addEventListener("activate", function(event) {
         );
       })
       .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener("fetch", function(event) {
+  console.log(event.request.url);
+  event.respondWith(
+    caches.match(event.request).then((res) => {
+      if (res) {
+        return res;
+      } else {
+        return fetch(event.request);
+      }
+    })
+    // .catch(() => {
+    //   return caches.open(CACHE_NAME).then((cache) => {
+    //     return
+    //   });
+    // })
   );
 });
