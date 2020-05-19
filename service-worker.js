@@ -12,6 +12,7 @@ const toCache = [
   "/img/splash-screen.png",
   "/img/weather-cloud.png",
   "/js/app.js",
+  "/js/fetchNews.js",
   "/js/pwa.js",
   "/src/utils/forecast.js",
   "/src/utils/geocode.js",
