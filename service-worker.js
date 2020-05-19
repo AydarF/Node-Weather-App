@@ -2,6 +2,9 @@ const CACHE_NAME = "sw-cache-example";
 
 const toCache = [
   "/newsdata",
+  "/news",
+  "/about",
+  "/404",
   "/",
   "/css/styles.css",
   "/img/apple-touch.png",
