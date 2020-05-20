@@ -19,6 +19,7 @@
 /* This is used to avoid unwanted web page shifts left or right when clicking nav links  */
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {
@@ -53,16 +54,10 @@ header a {
   color: #888888;
   text-decoration: none;
   margin-right: 16px;
-  border-bottom: 1px solid transparent;
 }
 
 header a:hover {
-  transition: 0.45s ease-in-out;
-  border-color: salmon;
-}
-
-header a:active {
-  border-bottom: none;
+  color: #bbbbbb;
 }
 
 h1 {
