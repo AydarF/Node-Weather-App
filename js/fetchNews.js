@@ -25,8 +25,8 @@ fetch(`/newsData`)
     });
   })
   .catch((error) => {
-    newsFeed.textContent =
-      "The news aren't available at this moment. We're working on fixing the issue. Please come back later";
+    newsFeed.textContent = error.message;
+
     console.log(error.message);
     controller.abort();
     console.log("Fetch aborted");
