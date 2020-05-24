@@ -81,8 +81,9 @@ h1 {
   animation: fadeIn 1.5s;
 }
 
-.searchArea p {
-  margin-top: 0;
+.searchArea label {
+  margin: 20px 0;
+  padding: 10px;
 }
 
 .searchArea input {
