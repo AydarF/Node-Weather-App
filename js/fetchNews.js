@@ -3,7 +3,7 @@ let newsFeed = document.querySelector(".newsFeed");
 const controller = new AbortController();
 const signal = controller.signal;
 
-fetch(`/newsData`)
+fetch(`/newsdata`)
   .then((res) => {
     res.json().then((data) => {
       if (data.error) {
