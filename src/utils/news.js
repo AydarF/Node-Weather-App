@@ -6,8 +6,12 @@ const news = (callback) => {
     "country=us&" +
     "apiKey=" +
     process.env.NEWS_API;
+	
+	const headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" 
+  }
 
-  request({ url, json: true }, (error, { body } = {}) => {
+  request({ url, headers, json: true }, (error, { body } = {}) => {
     if (error) {
       callback("Unable to connect to news services ", undefined);
     } else if (body.error) {
