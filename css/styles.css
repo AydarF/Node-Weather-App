@@ -75,7 +75,7 @@ h1 {
 }
 
 .searchArea {
-  padding: 20px 10px;
+  padding: 15px;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
   animation: fadeIn 1.5s;
@@ -83,11 +83,11 @@ h1 {
 
 .searchArea label {
   margin: 20px 0;
-  padding: 10px;
 }
 
 .searchArea input {
   border: 1px solid #cccccc;
+  margin-top: 10px;
   padding: 8px;
   font-size: var(--font-size);
   border-radius: 5px;
